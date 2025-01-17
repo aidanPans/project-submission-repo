@@ -1,0 +1,12 @@
+<div>
+    <h1>Login Page</h1>
+    <form [formGroup]="loginRef" (ngSubmit)="checkLoginDetails()">
+        <label>Email</label><br/>
+            <input type="email" formControlName="emailid" id="email"/><br/>
+        <label>Password</label><br/>
+            <input type="password" formControlName="password" id="password"/><br/>
+        <hr>
+        <input type="submit" value="Login" id="submitButton"/> | 
+        <input type="reset" value="Reset"/>
+    </form>
+</div>

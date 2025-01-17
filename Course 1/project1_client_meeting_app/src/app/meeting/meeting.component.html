@@ -1,0 +1,17 @@
+<div>
+    <h3>Schedule a Meeting</h3>
+    <hr>
+    <form [formGroup]="meetingRef" (ngSubmit)="addMeeting(); displayMeeting()">
+        <label>Meeting Topic</label><br/>
+            <input type="Meeting Topic" formControlName="meet_topic" id="topic" placeholder="Enter Meeting Topic"><br/>
+        <label>Number of People</label><br/>
+            <input type="Number of People" formControlName="meet_num_people" id="num_people" placeholder="Enter Number of People"><br/>
+        <label>Start Time</label><br/>
+            <input type="datetime-local" formControlName="meet_time" id="date_time"><br/>
+        <hr>
+        <input type="submit" value="Create Meeting" id="submitButton"> |
+        <input type="reset">
+        <hr>
+        {{meeting_message}}
+    </form>
+</div>

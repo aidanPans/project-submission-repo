@@ -1,0 +1,34 @@
+<div>
+    <h2>Welcome to your Dashboard, Admin</h2>
+    <hr>
+    <input type="button" value="View All Clients" (click)="displayAllClients()"/> | 
+    <input type="button" value="View All Meetings" (click)="displayAllMeetings()"/> |
+    <input type="button" value="View All Logins" (click)="displayAllLogins();"/> | 
+    <input type="button" value="log out" (click)="logout()"/>
+
+    <div *ngIf="client">
+        <div *ngFor="let client of client_array">
+            <p> CLIENT NAME: {{client.cli_name}} |||
+                CLIENT EMAIL: {{client.emailid}} |||
+                CLIENT ADDRESS: {{client.cli_address}}
+            </p>
+        </div> 
+    </div>
+    
+    <div *ngIf="meeting">
+        <div *ngFor="let meeting of meeting_array">
+            <p> MEETING TOPIC: {{meeting.meet_topic}} |||
+                NUMBER OF PEOPLE: {{meeting.meet_num_people}} |||
+                MEETING TIME: {{meeting.meet_time}}
+            </p>
+        </div>
+    </div>
+
+    <div *ngIf="login">
+        <div *ngFor="let login of login_array">
+            <p> CLIENT EMAIL ID: {{login.emailid}}
+                <!-- password: {{login.password}} -->
+            </p>
+        </div>
+    </div>
+</div>
